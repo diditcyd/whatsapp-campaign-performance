@@ -8,7 +8,7 @@ import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover
 import { CalendarIcon } from 'lucide-react';
 import { format } from 'date-fns';
 import { cn } from '@/lib/utils';
-import { Link } from 'react-router-dom';
+
 import { generateSampleData, type CampaignData } from '@/lib/sampleData';
 import CostOverTimeChart from '@/components/CostOverTimeChart';
 import CostByTeamChart from '@/components/CostByTeamChart';
@@ -76,14 +76,6 @@ const CostDashboard = () => {
             WhatsApp Cost Tracking Dashboard
           </h1>
           <p className="text-gray-600 text-lg">Monitor costs at a glance and drill down by team and campaign</p>
-          <div className="flex justify-center gap-3">
-            <Button asChild variant="outline">
-              <Link to="/">Overview</Link>
-            </Button>
-            <Button asChild>
-              <Link to="/cost">Cost Dashboard</Link>
-            </Button>
-          </div>
         </div>
 
         {/* Filters */}

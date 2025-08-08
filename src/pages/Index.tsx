@@ -14,7 +14,6 @@ import PerformanceOverTimeChart from '@/components/PerformanceOverTimeChart';
 import EngagementFunnelChart from '@/components/EngagementFunnelChart';
 import CampaignTable from '@/components/CampaignTable';
 import { generateSampleData } from '@/lib/sampleData';
-import { Link } from 'react-router-dom';
 const Index = () => {
   const [selectedCampaign, setSelectedCampaign] = useState<string>('all');
   const [selectedCampaignType, setSelectedCampaignType] = useState<string>('all');
@@ -58,12 +57,6 @@ const Index = () => {
           <p className="text-gray-600 text-lg">
             Monitor delivery rates, engagement metrics, and campaign performance
           </p>
-        </div>
-
-        <div className="flex justify-center gap-3">
-          <Button asChild variant="outline">
-            <Link to="/cost">Open Cost Dashboard</Link>
-          </Button>
         </div>
         {/* Filters */}
         <Card className="p-6 bg-white/70 backdrop-blur-sm border-0 shadow-lg">
