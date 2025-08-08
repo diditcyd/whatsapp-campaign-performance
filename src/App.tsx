@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import CostDashboard from "./pages/CostDashboard";
+import AppLayout from "./layouts/AppLayout";
 
 const queryClient = new QueryClient();
 
@@ -16,8 +17,10 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/cost" element={<CostDashboard />} />
+          <Route element={<AppLayout />}>
+            <Route path="/" element={<Index />} />
+            <Route path="/cost" element={<CostDashboard />} />
+          </Route>
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
